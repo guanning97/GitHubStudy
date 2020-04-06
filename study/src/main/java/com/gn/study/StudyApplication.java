@@ -1,21 +1,17 @@
 package com.gn.study;
 
-import org.apache.commons.lang3.StringUtils;
-import org.springframework.boot.SpringApplication;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
+@Slf4j
 public class StudyApplication extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
         return application.sources(StudyApplication.class);
-    }
-
-    public static void main(String[] args) {
-        new SpringApplication(StudyApplication.class).run(args);
     }
 
 }
